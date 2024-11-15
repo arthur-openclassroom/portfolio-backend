@@ -14,7 +14,7 @@ router.post('/', (req, res) => {
         text: `Nom: ${name}\nEmail: ${email}\nMessage: ${message}`
     })
         .then(() => {
-            res.send('Votre message a bien été envoyé !');
+            res.send('Votre message a bien été envoyé');
         })
         .catch(err => {
             console.error('Erreur lors de l\'envoi du message :', err);
