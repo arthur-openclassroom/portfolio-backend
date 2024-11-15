@@ -14,11 +14,11 @@ router.post('/', (req, res) => {
         text: `Nom: ${name}\nEmail: ${email}\nMessage: ${message}`
     })
         .then(() => {
-            res.send('Formulaire de contact reçu avec succès et message envoyé à Telegram!');
+            res.send('Votre message a bien été envoyé !');
         })
         .catch(err => {
-            console.error('Erreur lors de l\'envoi du message à Telegram :', err);
-            res.status(500).send('Erreur lors de l\'envoi du message à Telegram.');
+            console.error('Erreur lors de l\'envoi du message :', err);
+            res.status(500).send('Erreur lors de l\'envoi du message.');
         });
 });
 
